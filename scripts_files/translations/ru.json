@@ -1,3 +1,6 @@
 {
-	"State": "Состояние"
+	"State": "Состояние",
+	"Bottle rune timer": "Таймер руны в боттле",
+	"Additional text size": "Доп. размер текста",
+	"Shows the time when the rune will be activated": "Показывает время когда руна будет активирована"
 }
