@@ -1,20 +1,5 @@
 import "./translations"
 
-import {
-	Color,
-	DOTA_RUNES,
-	DOTAGameState,
-	DOTAGameUIState,
-	EventsSDK,
-	GameRules,
-	GameState,
-	GUIInfo,
-	InputManager,
-	item_bottle,
-	RendererSDK,
-	TextFlags
-} from "github.com/octarine-public/wrapper/index"
-
 import { MenuManager } from "./menu"
 
 new (class CBottleTimer {
@@ -33,8 +18,8 @@ new (class CBottleTimer {
 	}
 	private get isPostGame() {
 		return (
-			GameRules === undefined ||
-			GameRules.GameState === DOTAGameState.DOTA_GAMERULES_STATE_POST_GAME
+			Dota2SDK.GameRules === undefined ||
+			Dota2SDK.GameRules.GameState === DOTAGameState.DOTA_GAMERULES_STATE_POST_GAME
 		)
 	}
 	private get shouldDraw() {
