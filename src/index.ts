@@ -63,8 +63,11 @@ new (class CBottleTimer {
 		if (slot === undefined) {
 			return false
 		}
-		const position = GUIInfo.GetLowerHUDForUnit(entity).MainInventorySlots[slot],
-			height = Math.round(position.Height)
+		const position = GUIInfo.GetLowerHUDForUnit(entity).MainInventorySlots[slot]
+		if (position === undefined) {
+			return false
+		}
+		const height = Math.round(position.Height)
 		MenuSDK.WritePx(element, "left", Math.round(position.x))
 		MenuSDK.WritePx(element, "top", Math.round(position.y))
 		MenuSDK.WritePx(element, "width", Math.round(position.Width))
