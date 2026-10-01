@@ -4,7 +4,8 @@ const iconsPath = `${__OCT_PACKAGE_ROOT__}/scripts_files/bottle-timer/icons`
 export class MenuManager {
 	public readonly State: Menu.Toggle
 
-	private readonly sizeScale = 3
+	/** The slot's height over the text's at the slider's floor: 14px on a 1080p slot, twice that at its top. */
+	private readonly sizeScale = 3.5
 	private readonly textSize: Menu.Slider
 
 	private readonly tree = Menu.AddEntry("Visual")
@@ -21,7 +22,7 @@ export class MenuManager {
 		this.node.HeaderControl = this.State
 		this.node.Gate = this.State
 
-		this.textSize = this.node.AddSlider("Additional text size", 0, 0, 100)
+		this.textSize = this.node.AddSlider("Additional text size", 44, 0, 100)
 		this.textSize.IconPath = Menu.Icons.TextSize
 	}
 	public get TextSize() {
