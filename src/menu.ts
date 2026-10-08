@@ -1,3 +1,5 @@
+import { AddMapObjectsPage } from "./map-objects"
+
 /** Where this package's own glyphs are shipped: a spelled-out repository path does not resolve. */
 const iconsPath = `${__OCT_PACKAGE_ROOT__}/scripts_files/bottle-timer/icons`
 
@@ -8,11 +10,11 @@ export class MenuManager {
 	private readonly sizeScale = 3.5
 	private readonly textSize: Menu.Slider
 
-	private readonly tree = Menu.AddEntry("Visual")
-	private readonly node = this.tree.AddNode(
+	private readonly node = AddMapObjectsPage(
 		"Bottle rune timer",
 		`${iconsPath}/bottle.svg`,
-		"Shows the time when the rune will be activated"
+		"Shows the time when the rune will be activated",
+		1 // the last tab of Map objects
 	)
 
 	constructor() {
