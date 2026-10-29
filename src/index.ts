@@ -62,7 +62,7 @@ new (class CBottleTimer {
 			() => this.Render(),
 			MenuSDK.EPanelLayer.Screen
 		)
-		EventsSDK.on("Draw", this.Draw.bind(this))
+		EventsSDK.on("Draw2D", this.Draw.bind(this))
 	}
 
 	private get isUIGame() {
